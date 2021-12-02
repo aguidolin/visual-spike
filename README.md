@@ -1,11 +1,11 @@
 # Spike train datasets
 
 ### Introduction
-The folder named Datasets contains 28 datasets of spike train activity recorded in areas V1 and V2 of anesthetized macaque monkey. The data files are MATLAB .mat files and are described below, in sections titled The Experiment, The Data Files and List of the Datasets.
+The folder named Datasets contains 28 datasets of spike train activity recorded in areas V1 and V2 of anesthetized macaque monkey. The data files are MATLAB .mat files and are described below, in sections titled [The Experiment](#the-experiment), [The Data Files](#the-data-files) and [List of the Datasets](#list-of-the-datasets).
 
 The folder named Selection contains 28 data files containing a selection of the data, which is the starting point of the analysis in the manuscript  
 A Guidolin, M Desroches, JD Victor, K Purpura, & S Rodrigues (2021) *Geometry of spiking activity in early visual cortex: a Topological Data Analytic approach.*  
-The data files containing the selected data are described in last section of this document, Selection of Data.
+The data files containing the selected data are described in last section of this document, [Selection of Data](#selection-of-the-data).
 
 
 ### The Experiment
