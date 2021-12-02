@@ -1,9 +1,9 @@
-# Spike train datasets
+# Datasets of spike activity in the visual cortex
 
 ### Introduction
-The folder named Datasets contains 28 datasets of spike train activity recorded in areas V1 and V2 of anesthetized macaque monkey. The data files are MATLAB .mat files and are described below, in sections titled [The Experiment](#the-experiment), [The Data Files](#the-data-files) and [List of the Datasets](#list-of-the-datasets).
+The folder named Datasets contains 28 datasets of spike train activity recorded in areas V1 and V2 of anesthetized macaque monkeys. The data files are MATLAB .mat files and are described below, in sections titled [The Experiment](#the-experiment), [The Data Files](#the-data-files) and [List of the Datasets](#list-of-the-datasets).
 
-The folder named Selection contains 28 data files containing a selection of the data, which is the starting point of the analysis in the manuscript  
+The folder named Selection contains 28 data files with a selection of the data, which are the starting point of the analysis in the manuscript  
 A Guidolin, M Desroches, JD Victor, K Purpura, & S Rodrigues (2021) *Geometry of spiking activity in early visual cortex: a Topological Data Analytic approach.*  
 The data files containing the selected data are described in last section of this document, [Selection of Data](#selection-of-the-data).
 
@@ -16,7 +16,7 @@ In the data files, the 10 axes in the stimulus space are designated with a lette
 G: gamma, 	single-point correlation (i.e., the bias of white vs black checks)   
 B: beta --, 	two-point correlation, horizontal    
 C: beta |, 	 two-point correlation, vertical  
-D: beta \,	 two-point correlation, diagonal 1  
+D: beta \\,	 two-point correlation, diagonal 1  
 E: beta /,	 two-point correlation, diagonal 2  
 T: theta ┘,	 three-point correlation 1  
 U: theta└,	 three-point correlation 2  
@@ -28,9 +28,9 @@ We add ‘R’ to denote an additional stimulus ‘class’, the random textures
 For each stimulus class (except R), two strengths of correlation, for both ‘+’ and ‘-‘ spatial correlations, were tested. The smaller the correlation strength the more de-correlated the texture.  
 
 | Class       | Strengths (-)          | Strengths (+)  |
-| ------------- |:-------------:| -----:|
-| G     | -0.4 -0.2  | 0.2 0.4 |
-| B, C, D, E, T, U, V, W, A    | -0.8 -0.4      | 	0.4 0.8   |
+| ------------- |:-------------:|:-----:|
+| G     | -0.4 &nbsp; -0.2  | 0.2 &nbsp; 0.4 |
+| B, C, D, E, T, U, V, W, A    | -0.8 &nbsp; -0.4      | 	0.4 &nbsp; 0.8   |
 
 (The reason that we used a lower strength for G than the other axes is that G is perceptually more salient than the others.) Thus, textures from 41 coordinates in the stimulus space were used in these experiments: 4 for G, 4 for each of B, C, D, E, T, U, V, W, A, and 1 for the origin, R; there are 41 coordinate values:  4 on each of the 10 axes, and one at the origin.
 
@@ -40,15 +40,13 @@ For each stimulus class (except R), two strengths of correlation, for both ‘+�
 Each of these 2624 textures was presented for 320 ms, in a sequence without interruption, in a random order.  There was a brief pause between the 4 repeat cycles.  Repeats used the same 2624 unique stimuli, but in a different random order.
  A typical BTC experimental run took about 1 hour to complete (10496 * 320 ms=approx. 3358 sec).  
  
- Note: in the datasets whose name starts with ‘L73’ or ‘L76’, the number of examples of textures for each of the 41 coordinate values is 128 instead of 64. In these cases, the number of spike trains responses is the double of what we described in the previous paragraph. In the description of the data below we consider as a reference a dataset with 64 textures for each of the 41 coordinate values.
+ Note: in the datasets whose name starts with ‘L73’ or ‘L76’, the number of examples of textures for each of the 41 coordinate values is 128 instead of 64. In these cases, the number of spike train responses is the double of what we described in the previous paragraph. In the description of the data below we consider as a reference a dataset with 64 textures for each of the 41 coordinate values.
  
 ### The Data Files
 
 Example data file: L8501_TT4_btc_SPKTs.mat.
 
 The name of the file includes the animal id (L85), the recording session/sites (01), and the tetrode number (TT4). The spike times in the file are from the single-units that were recorded from TT4. The recording session/site represents an experimental run through the stimulus space described above with from 4 to 6 tetrodes positioned at various depths and retinotopic locations across V1 and V2. 
-
-The animal id, session number, and tetrode numbers also provide the information necessary for querying the histology database to determine the likely anatomical location of a single or multiunit recording, in terms of cortical area (V1/V2) and depth (supragranular, granular, and infragranular) within the cortex, and we will describe that separately with the full database.
  
 A ‘single unit’ or ‘multiunit’ are the spike times included in a distinct cluster of spike waveshapes extracted from the neural activity recorded from a single tetrode by spike-sorting software (which includes a K-means clustering step). A multiunit cluster is a collection of waveshapes that could not be further segregated into independent clusters yet are distinct from the other isolated single units in a tetrode recording. Multiunit clusters represent local population activity in the neighborhood of the tetrode.
 
@@ -192,8 +190,8 @@ ans =
     {[2624]}    {4×1 double}    {[327]}    {[7]}    {[41]}    {[64]}    {'a'}    {[-0.8000]}
 ```
 
-Column 1: position in the master list
-Column 2: the positions in the experimental sequence where this unique texture appears. As an example:
+Column 1: position in the master list.  
+Column 2: the positions in the experimental sequence where this unique texture appears. As an example:  
 
 ```dash
 >> SPKTs.EXPV.coordSequence{1:1,2}
@@ -205,12 +203,12 @@ ans =
         6137
         9348
 ```
-Column 3: (NA) A number used for specifying the texture map on the disk (bookkeeping for us)
-Column 4: (NB) An additional number used for specifying the texture map on the disk (bookkeeping)
-Column 5: coordinate number (1-41 in these BTC experiments).
-Column 6: sample from the texture ensemble associated with each coordinate.
-Column 7: texture class
-Column 8: correlation strength and sign for the coordinate   
+Column 3: (NA) A number used for specifying the texture map on the disk (bookkeeping).  
+Column 4: (NB) An additional number used for specifying the texture map on the disk (bookkeeping).  
+Column 5: coordinate number (1-41 in these BTC experiments).  
+Column 6: sample from the texture ensemble associated with each coordinate.  
+Column 7: texture class.  
+Column 8: correlation strength and sign for the coordinate.    
 
 Now we look inside the structured arrays for the texture classes. The R class has a different organization than the other classes due to the absence of any coordinates other than the origin.
 For example, 
@@ -225,6 +223,8 @@ ans =
 ```
 but
 ```dash
+>> SPKTs.B(3)
+
 ans = 
 
   struct with fields:
@@ -264,7 +264,7 @@ ans =
         HOCaxisValue: -0.8000
             spkTimes: {1×6 cell}
 ```
-Note the HOCaxisValue is -0.8, while for the p1 field,
+Note the **HOCaxisValue** is -0.8, while for the p1 field,
 ```dash
 >> SPKTs.B(3).p1
 
@@ -315,7 +315,7 @@ SPKTs.U(*repeat cycle*).*coordinate*.spkTimes{*Cluster number*}{*texture example
 
 Repeat cycle: 1-4  
 Coordinate: mp0 (R), p1, p2, m1, m2 (for all other texture classes).  
-Cluster number: refer to SPKTs.EXPV.Clusters. For this BTC file, the number runs from 1-6.  
+Cluster number: refer to SPKTs.EXPV.Clusters.   
 Texture example: 1-64.  
 
 ### List of the datasets
@@ -356,10 +356,13 @@ We list below the names of the datasets, indicating for each of them the area (V
 ### Selection of the Data
 
 We briefly describe the data files contained in the folder named Selection. Their names have the suffix “one0_SL”, e. g. L7215_TT3_one0_SL.mat. 
-These files are a selection of the spike data from the previously described datasets. The selected data has been analyzed in the manuscript  
+These files are a selection of the spike data from the previously described datasets. To make the selection, the MATLAB function ”select_one0.m” available in the [Top-spike](.../aguidolin/top-spike) collection has been used. 
+The selected data have been analyzed in the manuscript  
 A Guidolin, M Desroches, JD Victor, K Purpura, & S Rodrigues (2021) *Geometry of spiking activity in early visual cortex: a Topological Data Analytic approach.*
 
 Example data file: L7215_TT3_one0_SL.mat. 
+
+
 L7215_TT3_one0_SL.selectedClusters  contains the identity (as numbered in the original dataset L7215_TT3_btc_SPKTs.mat) of the single-units (neurons) that were selected for the analysis from the original dataset.
 
 L7215_TT3_one0_SL.summary80groups contain information on the selected 80 collection of neural responses within the original dataset. For each of the 80 collections (rows), the first four columns are:
