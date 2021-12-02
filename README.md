@@ -363,9 +363,13 @@ A Guidolin, M Desroches, JD Victor, K Purpura, & S Rodrigues (2021) *Geometry of
 Example data file: L7215_TT3_one0_SL.mat. 
 
 
-L7215_TT3_one0_SL.selectedClusters  contains the identity (as numbered in the original dataset L7215_TT3_btc_SPKTs.mat) of the single-units (neurons) that were selected for the analysis from the original dataset.
+The field **selectedClusters** contains the identity (as numbered in the original dataset L7215_TT3_btc_SPKTs.mat) of the single-units (neurons) that were selected for the analysis from the original dataset.
 
-L7215_TT3_one0_SL.summary80groups contain information on the selected 80 collection of neural responses within the original dataset. For each of the 80 collections (rows), the first four columns are:
+The field **spikes** contains the spike train responses of the 80 selected collections to the texture stimuli. For example, one0_SL.spikes{80} contains the spike train responses of the 80th collection, and the 4th spike train response in the 80th collection is one0_SL.spikes{80}{4}.  
+
+The field **labels** contains labels identifying the neurons firing each spike in the 80 selected collections, according to **selectedClusters**. For example, one0_SL.labels{80}{4} contains the labels identifying the neurons contributing to the 4th spike train response of the 80th collection.
+
+The field **summary80groups** contains information on the selected 80 collection of neural responses within the original dataset. For each of the 80 collections (rows), the first four columns are:
 
 Column 1: number of non-empty responses in the original dataset (computed considering all neurons of the original dataset, before restricting to considering four neurons)
 
