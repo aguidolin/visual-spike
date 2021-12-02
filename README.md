@@ -356,7 +356,7 @@ We list below the names of the datasets, indicating for each of them the area (V
 ### Selection of the Data
 
 We briefly describe the data files contained in the folder named Selection. Their names have the suffix “one0_SL”, e. g. L7215_TT3_one0_SL.mat. 
-These files are a selection of the spike data from the previously described datasets. To make the selection, the MATLAB function ”select_one0.m” available in the [Top-spike](https://github.com/aguidolin/visual-spike) collection has been used. 
+These files are a selection of the spike data from the previously described datasets. To make the selection, the MATLAB function ”select_one0.m” available in the [Top-spike](https://github.com/aguidolin/top-spike) collection has been used. 
 The selected data have been analyzed in the manuscript  
 A Guidolin, M Desroches, JD Victor, K Purpura, & S Rodrigues (2021) *Geometry of spiking activity in early visual cortex: a Topological Data Analytic approach.*
 
