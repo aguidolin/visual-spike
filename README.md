@@ -4,7 +4,7 @@
 The folder named Datasets contains 28 datasets of spike train activity recorded in areas V1 and V2 of anesthetized macaque monkeys. The data files are MATLAB .mat files and are described below, in sections titled [The Experiment](#the-experiment), [The Data Files](#the-data-files) and [List of the Datasets](#list-of-the-datasets).
 
 The folder named Selection contains 28 data files with a selection of the data, which are the starting point of the analysis in the manuscript  
-A Guidolin, M Desroches, JD Victor, K Purpura, & S Rodrigues (2021) *Geometry of spiking activity in early visual cortex: a Topological Data Analytic approach.*  
+A Guidolin, M Desroches, JD Victor, KP Purpura, & S Rodrigues (2021) *Geometry of spiking activity in early visual cortex: a Topological Data Analytic approach.*  
 The data files containing the selected data are described in last section of this document, [Selection of Data](#selection-of-the-data).
 
 
@@ -358,7 +358,7 @@ We list below the names of the datasets, indicating for each of them the area (V
 We briefly describe the data files contained in the folder named Selection. Their names have the suffix “one0_SL”, e. g. L7215_TT3_one0_SL.mat. 
 These files are a selection of the spike data from the previously described datasets. To make the selection, the MATLAB function ”select_one0.m” available in the [Top-spike](https://github.com/aguidolin/top-spike) collection has been used. 
 The selected data have been analyzed in the manuscript  
-A Guidolin, M Desroches, JD Victor, K Purpura, & S Rodrigues (2021) *Geometry of spiking activity in early visual cortex: a Topological Data Analytic approach.*
+A Guidolin, M Desroches, JD Victor, KP Purpura, & S Rodrigues (2021) *Geometry of spiking activity in early visual cortex: a Topological Data Analytic approach.*
 
 Example data file: L7215_TT3_one0_SL.mat. 
 
